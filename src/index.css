@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Nosifer&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth !important;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.brand-logo {
+  font-family: "Lobster", sans-serif;
+}
+.hero {
+  position: relative;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.hero::after {
+  position: absolute;
+  content: "";
+  width: 800px;
+  height: 800px;
+  right: -400px;
+  bottom: 100px;
+  background: rgb(34, 197, 94);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.about-radius {
+  height: 450px;
+  border-radius: 5px 80px 5px 80px;
+}
+@media (max-width: 767px) {
+  .about-radius {
+    height: auto;
+    border-radius: 80px 5px 80px 5px;
+  }
+}
