@@ -12,7 +12,7 @@ const Experience = () => {
   return (
     <section className="pt-12 pb-20 md:px-14 bg-neutral-200" id="experience">
       <div className="container">
-        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-5xl uppercase tracking-widest">
+        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-widest">
           Experience
         </h2>
         <div className="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-16">
@@ -29,10 +29,10 @@ const Experience = () => {
                   alt={exp.company_name}
                 />
                 <div>
-                  <h4 className="text-2xl font-bold capitalize text-green-600">
+                  <h4 className="text-md md:text-2xl font-bold capitalize text-green-600">
                     {exp.company_name}
                   </h4>
-                  <p>{exp.description}</p>
+                  <p className="text-sm md:text-md">{exp.description}</p>
                 </div>
                 <a
                   href={exp.link}

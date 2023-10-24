@@ -1,4 +1,4 @@
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -11,18 +11,27 @@ const Footer = () => {
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © {new Date().getFullYear()} portfolio
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a href="#" className="text-gray-500">
-            <BsFacebook size={20} />
+        <span className="flex gap-4 justify-center items-center sm:ml-auto sm:mt-0 mt-4">
+          <a
+            href="https://www.facebook.com/blackdevil2743"
+            target="_blank"
+            className="text-gray-700"
+          >
+            <BsFacebook size={25} />
           </a>
-          <a href="#" className="ml-3 text-gray-500">
-            <BsTwitter size={20} />
+          <a
+            href="https://github.com/saifullah4772"
+            target="_blank"
+            className="text-gray-700"
+          >
+            <BsGithub size={25} />
           </a>
-          <a href="#" className="ml-3 text-gray-500">
-            <BsInstagram size={20} />
-          </a>
-          <a href="#" className="ml-3 text-gray-500">
-            <BsLinkedin size={20} />
+          <a
+            href="https://www.instagram.com/dark.devil.143"
+            target="_blank"
+            className="text-gray-700"
+          >
+            <BsInstagram size={25} />
           </a>
         </span>
       </div>

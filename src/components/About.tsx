@@ -2,7 +2,7 @@ export const About = () => {
   return (
     <section className="pt-12 pb-20 bg-neutral-200" id="about">
       <div className="container">
-        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-5xl uppercase tracking-widest">
+        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-widest">
           About
         </h2>
         <div

@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section className="pt-12 pb-20 bg-neutral-200" id="contact">
       <div className="container">
-        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-5xl uppercase tracking-widest">
+        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-widest">
           Contact
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">
@@ -15,7 +15,7 @@ const Contact = () => {
           >
             <BsLinkedin size={40} className="text-green-500" />
             <div>
-              <h2>Linkedin</h2>
+              <h2 className="font-bold text-lg">Linkedin</h2>
               <p>saif-ullah-saifi</p>
             </div>
           </div>
@@ -25,8 +25,8 @@ const Contact = () => {
           >
             <HiMail size={40} className="text-green-500" />
             <div>
-              <h2>Email</h2>
-              <p>test123@example.com</p>
+              <h2 className="font-bold text-lg">Email</h2>
+              <p>murtasimmalik0@gmail.com</p>
             </div>
           </div>
           <div
@@ -35,7 +35,7 @@ const Contact = () => {
           >
             <FaLocationDot size={40} className="text-green-500" />
             <div>
-              <h2>Location</h2>
+              <h2 className="font-bold text-lg">Location</h2>
               <p>Hello World Technologies</p>
             </div>
           </div>

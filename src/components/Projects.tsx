@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <section className="md:px-14 pt-12 pb-28">
       <div className="container" id="projects">
-        <h2 className="text_shadow text-green-600 text-center pb-12 font-bold text-5xl uppercase tracking-widest">
+        <h2 className="text_shadow text-green-600 text-center pb-12 font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-widest">
           Projects
         </h2>
 
