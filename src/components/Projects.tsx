@@ -36,7 +36,7 @@ const Projects = () => {
 
   return (
     <section>
-      <div className="container px-14 py-28">
+      <div className="container px-14 py-28" id="projects">
         <h2 className="text-green-700 font-bold text-2xl pb-4 uppercase tracking-[0.2em]">
           Projects
         </h2>
@@ -49,6 +49,7 @@ const Projects = () => {
               <div
                 className="overflow-hidden cursor-pointer duration-300 hover:scale-105 rounded-lg shadow-xl shadow-neutral-400 bg-neutral-100"
                 key={index}
+                data-aos="flip-right"
               >
                 <img
                   src={proj.img}

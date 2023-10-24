@@ -11,6 +11,7 @@ const Skills = () => {
             return (
               <div
                 key={index}
+                data-aos="zoom-in"
                 className="text-center cursor-pointer duration-300 hover:scale-110"
               >
                 <div className="flex flex-col justify-center items-center">

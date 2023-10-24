@@ -10,7 +10,6 @@ const Navbar = () => {
     { name: "Skills", link: "#skills", id: "skills" },
     { name: "Experience", link: "#experience", id: "experience" },
     { name: "Projects", link: "#projects", id: "projects" },
-    { name: "Portfolio", link: "#portfolio", id: "portfolio" },
     { name: "Contact", link: "#contact", id: "contact" },
   ];
   useEffect(() => {
@@ -30,7 +29,7 @@ const Navbar = () => {
   return (
     <nav
       className={`py-4 fixed top-0 left-0 w-full duration-300 z-50 ${
-        !isTop ? "bg-neutral-100" : "bg-transparent"
+        !isTop ? "bg-neutral-200" : "bg-transparent"
       }`}
     >
       <div className="container">

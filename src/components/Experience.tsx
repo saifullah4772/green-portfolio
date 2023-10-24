@@ -26,7 +26,7 @@ const Experience = () => {
     },
   ];
   return (
-    <section className="py-28 px-14 bg-neutral-100" id="experience">
+    <section className="py-28 px-14 bg-neutral-200" id="experience">
       <div className="container">
         <h2 className="text-green-700 font-bold text-2xl pb-4 uppercase tracking-[0.2em]">
           Experience
@@ -35,8 +35,9 @@ const Experience = () => {
           {exper.map((exp, index) => {
             return (
               <div
-                className="bg-white shadow-xl rounded-md p-6 flex flex-col justify-center items-start gap-4 cursor-pointer hover:scale-105 duration-300"
+                className="bg-white shadow-xl rounded-md p-6 flex flex-col justify-center items-start gap-4 cursor-pointer hover:scale-105 duration-150"
                 key={index}
+                data-aos="flip-left"
               >
                 <img
                   src={exp.img}

@@ -1,11 +1,14 @@
 export const About = () => {
   return (
-    <section className="py-28 bg-neutral-100" id="about">
+    <section className="py-28 bg-neutral-200" id="about">
       <div className="container">
         <h2 className="text-green-700 font-bold text-2xl pb-4 uppercase tracking-[0.2em]">
           About
         </h2>
-        <div className="overflow-hidden p-4 flex flex-col md:flex-row shadow-xl shadow-neutral-400 justify-center items-center about-radius bg-neutral-200">
+        <div
+          data-aos="fade-up"
+          className="overflow-hidden p-4 flex flex-col md:flex-row shadow-xl shadow-neutral-400 justify-center items-center about-radius bg-neutral-100"
+        >
           <div className="md:w-1/2 justify-start items-center h-full">
             <div className="w-full h-full md:rounded-bl-[64px] rounded-tl-[64px] md:rounded-tl-none overflow-hidden">
               <img

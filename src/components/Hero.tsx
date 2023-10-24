@@ -6,7 +6,7 @@ const Hero = () => {
     >
       <div className="container">
         <div className="flex justify-between items-center">
-          <div className="flex-1">
+          <div className="flex-1" data-aos="fade-right">
             <div className="md:w-4/5 flex flex-col justify-center items-center md:items-start">
               <h6 className="md:text-neutral-400 text-2xl font-bold">Hi</h6>
               <h1 className="text-6xl font-bold py-3 text-neutral-900">
@@ -36,7 +36,10 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="flex-1 hidden md:flex justify-end items-center">
+          <div
+            data-aos="fade-left"
+            className="flex-1 hidden md:flex justify-end items-center"
+          >
             <div className="w-60 lg:w-96 h-60 lg:h-96 scale-105 rounded-full shadow-xl shadow-neutral-600 overflow-hidden">
               <img
                 src="/hero-image.jpg"
