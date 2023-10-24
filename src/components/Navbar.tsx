@@ -61,7 +61,7 @@ const Navbar = () => {
             </ul>
             <a
               className="bg-green-600 py-3 px-4 hover:bg-green-700 rounded-md text-neutral-50"
-              href="/"
+              href="/media/resume.pdf"
               download
             >
               Resume
@@ -93,7 +93,7 @@ const Navbar = () => {
               </ul>
               <a
                 className="bg-green-600 py-3 px-4  hover:bg-green-700 rounded-md text-neutral-50"
-                href="/"
+                href="/media/resume.pdf"
                 download
               >
                 Resume

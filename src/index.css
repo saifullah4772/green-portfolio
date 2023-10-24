@@ -16,6 +16,9 @@ body {
 .hero {
   position: relative;
 }
+.text_shadow {
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6);
+}
 .container {
   width: 80%;
   margin: 0 auto;

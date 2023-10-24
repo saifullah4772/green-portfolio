@@ -1,34 +1,18 @@
 const Experience = () => {
   const exper = [
     {
-      img: "/hero-image.jpg",
-      company_name: "Google",
+      img: "/experience/hello.jpg",
+      company_name: "Hello World Technologies",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quibusdam.",
+        "Hello World Technologies is a software company and has an institude for development courses.",
 
-      link: "#",
-    },
-    {
-      img: "/hero-image.jpg",
-      company_name: "Google",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quibusdam.",
-
-      link: "#",
-    },
-    {
-      img: "/hero-image.jpg",
-      company_name: "Google",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, quibusdam.",
-
-      link: "#",
+      link: "https://helloworldtech.com/",
     },
   ];
   return (
-    <section className="py-28 px-14 bg-neutral-200" id="experience">
+    <section className="pt-12 pb-20 md:px-14 bg-neutral-200" id="experience">
       <div className="container">
-        <h2 className="text-green-700 font-bold text-2xl pb-4 uppercase tracking-[0.2em]">
+        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-5xl uppercase tracking-widest">
           Experience
         </h2>
         <div className="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-16">
@@ -52,6 +36,7 @@ const Experience = () => {
                 </div>
                 <a
                   href={exp.link}
+                  target="_blank"
                   className="bg-green-600 py-3 px-4 hover:bg-green-700 rounded-md text-neutral-50"
                 >
                   Visit Now

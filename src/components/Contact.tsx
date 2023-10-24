@@ -3,9 +3,9 @@ import { HiMail } from "react-icons/hi";
 import { FaLocationDot } from "react-icons/fa6";
 const Contact = () => {
   return (
-    <section className="py-28 bg-neutral-200" id="contact">
+    <section className="pt-12 pb-20 bg-neutral-200" id="contact">
       <div className="container">
-        <h2 className="text-green-700 font-bold text-2xl pb-4 uppercase tracking-[0.2em]">
+        <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-5xl uppercase tracking-widest">
           Contact
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">

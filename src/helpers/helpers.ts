@@ -24,6 +24,12 @@ const Icons = [
     id: "tailwind",
   },
   {
+    src: "/icons/bootstrap.svg",
+    alt: "Bootstrap",
+    title: "Bootstrap",
+    id: "bootstrap",
+  },
+  {
     src: "/icons/javascript.svg",
     alt: "JavaScript",
     title: "JavaScript",
@@ -40,6 +46,12 @@ const Icons = [
     alt: "React JS",
     title: "React JS",
     id: "react",
+  },
+  {
+    src: "/icons/astro.svg",
+    alt: "Astro JS",
+    title: "Astro JS",
+    id: "astro",
   },
   {
     src: "/icons/api.svg",

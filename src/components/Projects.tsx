@@ -4,51 +4,45 @@ const Projects = () => {
   const projs = [
     {
       title: "Code Glitch",
-      img: "/hero-image.jpg",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Fugiat, animi.",
-      techs: ["html", "css", "javascript", "react", "nodejs", "mongodb"],
+      img: "/projects/codeglitch.jpg",
+      desc: "Code Glitch is a multipage portfolio and blog website for blog posting.",
+      techs: ["html", "react", "nextjs", "mongodb", "tailwind"],
+      link: "https://www.codesglitch.com/",
     },
     {
       title: "Today Electricians",
-      img: "/hero-image.jpg",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Fugiat, animi.",
-      techs: ["html", "css", "javascript", "react", "tailwind"],
+      img: "/projects/todayelectricians.jpg",
+      desc: "Today Electricians is online website that provides electricians for home services.",
+      techs: ["html", "css", "javascript", "bootstrap", "astro"],
+      link: "https://todayelectricians.com/",
     },
     {
-      title: "Today Electricians",
-      img: "/hero-image.jpg",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Fugiat, animi.",
-      techs: ["html", "css", "javascript", "react", "tailwind"],
-    },
-    {
-      title: "Today Electricians",
-      img: "/hero-image.jpg",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Fugiat, animi.",
-      techs: ["html", "css", "javascript", "react", "tailwind"],
-    },
-    {
-      title: "Today Electricians",
-      img: "/hero-image.jpg",
-      desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.Fugiat, animi.",
-      techs: ["html", "css", "javascript", "react", "tailwind"],
+      title: "Green Portfolio",
+      img: "/projects/green.jpg",
+      desc: "Green Portfolio is a developers personal portfolio to showcase it's experience and projects.",
+      techs: ["html", "css", "react", "tailwind"],
+      link: "https://green-portfolio.pages.dev/",
     },
   ];
 
   return (
-    <section>
-      <div className="container px-14 py-28" id="projects">
-        <h2 className="text-green-700 font-bold text-2xl pb-4 uppercase tracking-[0.2em]">
+    <section className="md:px-14 pt-12 pb-28">
+      <div className="container" id="projects">
+        <h2 className="text_shadow text-green-600 text-center pb-12 font-bold text-5xl uppercase tracking-widest">
           Projects
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {projs.map((proj, index) => {
             const projects = Icons.filter((project) => {
               return proj.techs.includes(project.id);
             });
             return (
-              <div
+              <a
+                href={proj.link}
                 className="overflow-hidden cursor-pointer duration-300 hover:scale-105 rounded-lg shadow-xl shadow-neutral-400 bg-neutral-100"
                 key={index}
+                target="_blank"
                 data-aos="flip-right"
               >
                 <img
@@ -74,7 +68,7 @@ const Projects = () => {
                     );
                   })}
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>
