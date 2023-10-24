@@ -34,8 +34,8 @@ const Navbar = () => {
     >
       <div className="container">
         <div className="flex justify-between items-center">
-          <a href="/" className="brand-logo text-green-500 z-50 text-4xl">
-            <img src="/favicon.png" className="w-24" alt="favicon" />
+          <a href="/" className="brand-logo text-green-500 z-50">
+            <img src="/favicon.png" className="w-16 sm:w-24" alt="favicon" />
           </a>
           <div className="hidden md:flex justify-center items-center gap-4 lg:gap-8">
             <ul className="flex justify-between items-center gap-4 lg:gap-8">
@@ -48,9 +48,16 @@ const Navbar = () => {
                 >
                   <a
                     href={nav.link}
-                    className={`text-md text-gray-600 font-bold border-b-[3px] duration-300 hover:border-green-500 ${
+                    className={`text-md text-neutral-700
+                     font-bold border-b-[3px] duration-300 ${
+                       isTop
+                         ? "hover:border-neutral-700"
+                         : "hover:border-green-500"
+                     } ${
                       active === nav.id
-                        ? "border-green-500"
+                        ? isTop
+                          ? "border-neutral-700"
+                          : "border-green-500"
                         : "border-transparent"
                     }`}
                   >
@@ -60,7 +67,9 @@ const Navbar = () => {
               ))}
             </ul>
             <a
-              className="bg-green-600 py-3 px-4 hover:bg-green-700 rounded-md text-neutral-50"
+              className={`${isTop ? "bg-gray-100" : "bg-green-600"} py-3 px-4 ${
+                isTop ? "hover:bg-gray-200" : "hover:bg-green-700"
+              } rounded-md ${isTop ? "text-neutral-700" : "text-neutral-100"} `}
               href="/media/resume.pdf"
               download
             >
