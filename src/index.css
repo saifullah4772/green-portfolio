@@ -14,8 +14,76 @@ body {
   font-family: "Lobster", sans-serif;
 }
 .hero {
-  position: relative;
   background: linear-gradient(90deg, white 50%, rgb(34, 197, 94) 50%);
+}
+.hero .animated-circle {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 30px;
+  height: 30px;
+  background: rgb(34, 197, 94);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: animate-circle 7s infinite;
+}
+.hero .animated-circle:nth-child(2) {
+  top: 10%;
+  left: 15%;
+  width: 30px;
+  height: 30px;
+}
+.hero .animated-circle:nth-child(3) {
+  top: 90%;
+  left: 35%;
+  width: 30px;
+  height: 30px;
+}
+.hero .animated-circle:nth-child(4) {
+  top: 80%;
+  left: 5%;
+  width: 50px;
+  height: 50px;
+}
+.hero .animated-circle:nth-child(5) {
+  top: 5%;
+  left: 55%;
+  width: 15px;
+  background: #efefef !important;
+  height: 15px;
+}
+.hero .animated-circle:nth-child(6) {
+  top: 70%;
+  left: 65%;
+  background: #efefef !important;
+  width: 25px;
+  height: 25px;
+}
+.hero .animated-circle:nth-child(7) {
+  top: 10%;
+  left: 75%;
+  background: #efefef !important;
+  width: 30px;
+  height: 30px;
+}
+.hero .animated-circle:nth-child(8) {
+  top: 85%;
+  left: 85%;
+  background: #efefef !important;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes animate-circle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .text_shadow {
   text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6);

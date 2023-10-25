@@ -4,6 +4,29 @@ const Hero = () => {
       className="hero relative h-[90vh] overflow-hidden flex justify-center items-center"
       id="home"
     >
+      <span
+        className="animated-circle"
+        style={{ animationDelay: "0.5s" }}
+      ></span>
+      <span className="animated-circle" style={{ animationDelay: "1s" }}></span>
+      <span
+        className="animated-circle"
+        style={{ animationDelay: "2.5s" }}
+      ></span>
+      <span className="animated-circle" style={{ animationDelay: "1s" }}></span>
+      <span
+        className="animated-circle"
+        style={{ animationDelay: "1.5s" }}
+      ></span>
+      <span className="animated-circle" style={{ animationDelay: "1s" }}></span>
+      <span
+        className="animated-circle"
+        style={{ animationDelay: "0.5s" }}
+      ></span>
+      <span
+        className="animated-circle"
+        style={{ animationDelay: "1.5s" }}
+      ></span>
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="w-full sm:w-auto sm:flex-1" data-aos="fade-right">
