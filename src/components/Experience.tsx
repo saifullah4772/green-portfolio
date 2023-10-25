@@ -1,3 +1,13 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import Exper from "./SubComponents/Exper";
+
 const Experience = () => {
   const exper = [
     {
@@ -15,36 +25,43 @@ const Experience = () => {
         <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-widest">
           Experience
         </h2>
-        <div className="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <Swiper
+          // install Swiper modules
+          style={{ padding: 50 }}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={10}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
+          onSlideChange={() => {
+            return;
+          }}
+        >
           {exper.map((exp, index) => {
             return (
-              <div
-                className="bg-white shadow-xl rounded-md p-6 flex flex-col justify-center items-start gap-4 cursor-pointer hover:scale-105 duration-150"
-                key={index}
-                data-aos="flip-left"
-              >
-                <img
-                  src={exp.img}
-                  className="h-52 object-cover w-full"
-                  alt={exp.company_name}
-                />
-                <div>
-                  <h4 className="text-md md:text-2xl font-bold capitalize text-green-600">
-                    {exp.company_name}
-                  </h4>
-                  <p className="text-sm md:text-md">{exp.description}</p>
-                </div>
-                <a
-                  href={exp.link}
-                  target="_blank"
-                  className="bg-green-600 py-3 px-4 hover:bg-green-700 rounded-md text-neutral-50"
-                >
-                  Visit Now
-                </a>
-              </div>
+              <SwiperSlide key={index}>
+                <Exper exp={exp} />
+              </SwiperSlide>
             );
           })}
-        </div>
+        </Swiper>
       </div>
     </section>
   );

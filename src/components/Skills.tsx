@@ -1,31 +1,60 @@
 import { Icons } from "../helpers/helpers";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import Skill from "./SubComponents/Skill";
 const Skills = () => {
   return (
     <section className="pt-12 pb-28" id="skills">
-      <div className="container">
+      <div className="container select-none">
         <h2 className="text_shadow text-green-600 text-center pb-8 font-bold text-2xl md:text-4xl lg:text-5xl uppercase tracking-widest">
           Skills
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-between content-center gap-10">
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={10}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
+          onSlideChange={() => {
+            return;
+          }}
+        >
           {Icons.map((skill, index) => {
             return (
-              <div
-                key={index}
-                data-aos="zoom-in"
-                className="text-center cursor-pointer duration-300 hover:scale-110"
-              >
-                <div className="flex flex-col justify-center items-center">
-                  <img
-                    className="w-36 h-36 p-4 rounded-full object-cover grayscale hover:grayscale-0 bg-neutral-200 shadow-lg shadow-neutral-300"
-                    src={skill.src}
-                    alt={skill.alt}
-                  />
-                </div>
-                <p className="pt-4">{skill?.title}</p>
-              </div>
+              <SwiperSlide key={index}>
+                <Skill skill={skill} />
+              </SwiperSlide>
             );
           })}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
