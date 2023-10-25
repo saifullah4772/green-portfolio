@@ -1,13 +1,4 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
 import { Icons } from "../helpers/helpers";
-import Project from "./SubComponents/Project";
 
 const Projects = () => {
   const projs = [
@@ -32,13 +23,6 @@ const Projects = () => {
       techs: ["html", "css", "react", "tailwind"],
       link: "https://saifullah.pages.dev/",
     },
-    {
-      title: "Green Portfolio",
-      img: "/projects/green.jpg",
-      desc: "Green Portfolio is a developers personal portfolio to showcase it's experience and projects.",
-      techs: ["html", "css", "react", "tailwind"],
-      link: "https://saifullah.pages.dev/",
-    },
   ];
 
   return (
@@ -48,45 +32,46 @@ const Projects = () => {
           Projects
         </h2>
 
-        <Swiper
-          style={{ padding: 50 }}
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={10}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 40,
-            },
-            1200: {
-              slidesPerView: 3,
-              spaceBetween: 50,
-            },
-          }}
-          onSlideChange={() => {
-            return;
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {projs.map((proj, index) => {
             const projects = Icons.filter((project) => {
               return proj.techs.includes(project.id);
             });
             return (
-              <SwiperSlide key={index}>
-                <Project projects={projects} proj={proj} />
-              </SwiperSlide>
+              <a
+                href={proj.link}
+                className="overflow-hidden cursor-pointer duration-300 hover:scale-105 rounded-lg shadow-xl shadow-neutral-400 bg-neutral-100"
+                key={index}
+                target="_blank"
+                data-aos="flip-right"
+              >
+                <img
+                  src={proj.img}
+                  alt="web image"
+                  className="h-52 w-full object-cover object-center"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold text-lg">{proj.title}</h3>
+                  <h4>{proj.desc}</h4>
+                </div>
+                <hr className="border-neutral-300 border-b-2 block" />
+                <div className="flex justify-start gap-2 items-center p-4">
+                  {projects.map((project, index) => {
+                    return (
+                      <img
+                        src={project?.src}
+                        alt={project.id}
+                        key={index}
+                        className="w-8 cursor-pointer"
+                        title={project.title}
+                      />
+                    );
+                  })}
+                </div>
+              </a>
             );
           })}
-        </Swiper>
+        </div>
       </div>
     </section>
   );
