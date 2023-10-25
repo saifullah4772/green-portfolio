@@ -30,14 +30,14 @@ const Projects = () => {
       img: "/projects/green.jpg",
       desc: "Green Portfolio is a developers personal portfolio to showcase it's experience and projects.",
       techs: ["html", "css", "react", "tailwind"],
-      link: "https://green-portfolio.pages.dev/",
+      link: "https://saifullah.pages.dev/",
     },
     {
       title: "Green Portfolio",
       img: "/projects/green.jpg",
       desc: "Green Portfolio is a developers personal portfolio to showcase it's experience and projects.",
       techs: ["html", "css", "react", "tailwind"],
-      link: "https://green-portfolio.pages.dev/",
+      link: "https://saifullah.pages.dev/",
     },
   ];
 
